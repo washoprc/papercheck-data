@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Open window</h2>
+
+<a href="javascript:void(window.open('http://www.yahoo.co.jp/', '', 'width=500,height=400'));">新しいウィンドウ</a>
+
+<script type="text/javascript"><!--
+function m_win(url,windowname,width,height) {
+ var features="location=no, menubar=no, status=yes, scrollbars=yes, resizable=yes, toolbar=no";
+ if (width) {
+  if (window.screen.width > width)
+   features+=", left="+(window.screen.width-width)/2;
+  else width=window.screen.width;
+  features+=", width="+width;
+ }
+ if (height) {
+  if (window.screen.height > height)
+   features+=", top="+(window.screen.height-height)/2;
+  else height=window.screen.height;
+  features+=", height="+height;
+ }
+ window.open(url,windowname,features);
+}
+// --></script>
+
+<a href="http://www.yahoo.co.jp/" onclick="m_win(this.href,'mywindow7',400,300); return false;">クリック１</a><br>
+<a href="http://www.yahoo.co.jp/" onclick="m_win(this.href,null,600,400); return false;">クリック２</a><br>
+
+
+<form>
+<input type=button value=ABC onclick="m_win('http://www.yahoo.co.jp/','mywindow7',400,300); return false;">
+</form>
+</body>
+</html>

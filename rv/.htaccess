@@ -1,0 +1,4 @@
+AuthUserFile /home/groups/app/public_html/papercheck/rv/.htpass_rv
+AuthName "Basic Auth"
+AuthType Basic
+Require valid-user

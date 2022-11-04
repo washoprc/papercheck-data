@@ -1,0 +1,11 @@
+doc
+tutorial
+samples
+Documentation
+Examples
+ad/data/*
+rv/data/*
+*.pdf
+*.doc
+phpinfo.php
+.vscode/*

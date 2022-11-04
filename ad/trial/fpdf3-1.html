@@ -1,0 +1,21 @@
+<?php
+echo "I AM HERE (01)<br>";
+
+require('../Fpdf/fpdf.php');
+echo "I AM HERE (02)<br>";
+
+$pdf=new FPDF();
+echo "I AM HERE (03)<br>";
+
+$pdf->AddPage();
+echo "I AM HERE (04)<br>";
+
+$pdf->Settitle('sample desu');
+$pdf->SetFont('Arial','B',16);
+$pdf->Cell(40,10,'Hello World ç°ì˙!');
+echo "I AM HERE (05)<br>";
+
+$pdf->Output('doc.pdf', 'F');
+echo "I AM HERE (06)<br>";
+
+?>

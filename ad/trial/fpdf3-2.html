@@ -1,0 +1,16 @@
+<?php
+require('../fpdf/mbfpdf.php');
+
+$pdf=new MBFPDF();
+$pdf->AddMBFont(GOTHIC ,'SJIS');
+$pdf->AddMBFont(PGOTHIC,'SJIS');
+// $pdf->Open();
+$pdf->AddPage();
+$pdf->SetFont(GOTHIC,'',24);
+$pdf->Write(10,"MSゴシックで文字列を表示\n");
+$pdf->SetFont(PGOTHIC,'',24);
+$pdf->Write(10,"MSPゴシックで文字列を表示\n");
+$pdf->Output('doc.pdf','F');
+// $pdf->Output();
+
+?>

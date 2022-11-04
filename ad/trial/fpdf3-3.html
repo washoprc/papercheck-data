@@ -1,0 +1,22 @@
+<?php
+require('../fpdf/mbfpdf.php');
+
+$pdf=new MBFPDF();
+$pdf->AddMBFont(GOTHIC ,'SJIS');
+$pdf->AddMBFont(PGOTHIC,'SJIS');
+// $pdf->Open();
+$pdf->AddPage();
+$pdf->SetFont(GOTHIC,'',24);
+$pdf->Write(10,"MSゴシックで文字列を表示\n");
+$pdf->SetFont(PGOTHIC,'',24);
+$pdf->Write(10,"MSPゴシックで文字列を表示\n");
+
+$x = $pdf->GetX();
+$pdf->Cell(60, 30, '境界線は上と左、横幅指定', 'LT');
+$pdf->SetXY($x, 60);
+$pdf->Cell(0, 20, '境界線を上下左右、横幅は右端まで', 1);
+
+$pdf->Output('doc.pdf','F');
+// $pdf->Output();
+
+?>
